@@ -12,6 +12,15 @@ module.exports = {
         Yo.send(username, link, function(data) {
             res.send(data);
         });
+    },
+    clip : function(req,res) {
+        var username = req.param('username'),
+            clip = req.param('clip');
+        var link = "http://yoclip.herokuapp.com/clip?m="+clip
+        link = encodeURI(link);
+        Yo.send(username, link, function(data) {
+            res.send(data);
+        });
     }
 };
 
