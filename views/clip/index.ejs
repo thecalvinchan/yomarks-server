@@ -5,5 +5,5 @@
     }
 </style>
 <div class="wrapper">
-    <p><%- clip %></p>
+    <p><%= decodeURIComponent(clip).replace(/</g, "&lt;").replace(/>/g, "&gt;"); %></p>
 </div>
